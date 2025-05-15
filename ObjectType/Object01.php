@@ -6,7 +6,7 @@ class Produk{
             $penerbit,
             $harga;
     
-    public function __constructor($judul="judul", $penulis="penulis",
+    public function __construct($judul="judul", $penulis="penulis",
     $penerbit="penerbit", $harga=0){
 
         $this->judul=$judul;
@@ -26,7 +26,7 @@ class Produk{
 
 class CetakInfoProduk{
     public function cetak (Produk $produk){
-        $str = "{$produk->judul}" | "{$produk->getLabel()}
+        $str = "{$produk->judul} | {$produk->getLabel()}
         (Rp. {$produk->harga})";
         return $str;
 

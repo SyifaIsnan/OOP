@@ -6,7 +6,7 @@ class Produk{
             $penerbit,
             $harga;
     
-    public function __constructor($judul="judul", $penulis="penulis",
+    public function __construct($judul="judul", $penulis="penulis",
     $penerbit="penerbit", $harga=0){
 
         $this->judul=$judul;
@@ -20,7 +20,7 @@ class Produk{
     }
 
     public function getLabel(){
-        return "$this->penulis, $this->penerbit,
+        return "$this->judul, $this->penulis, $this->penerbit,
         $this->harga";
     }
 }
@@ -40,7 +40,7 @@ echo "<hr>";
 echo "Game : " . $produk4->getLabel();
 
 echo "<hr>";
-echo "Default : " . $produk4->getLabel();
+echo "Default : " . $produk5->getLabel();
 
 
 
